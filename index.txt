@@ -1,4 +1,6 @@
 #!/bin/bash
+set -euo pipefail
+
 #
 # Usage: curl https://pyenv.run | bash
 #
@@ -6,7 +8,7 @@
 #
 index_main() {
     set -e
-    curl -s -S -L https://raw.githubusercontent.com/pyenv/pyenv-installer/master/bin/pyenv-installer | bash
+    curl -s -S -L -f https://raw.githubusercontent.com/pyenv/pyenv-installer/master/bin/pyenv-installer | bash
 }
 
 index_main
